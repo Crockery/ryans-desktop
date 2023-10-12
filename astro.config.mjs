@@ -1,8 +1,8 @@
 import mdx from '@astrojs/mdx';
-import tailwind from '@astrojs/tailwind';
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   trailingSlash: 'always',
-  integrations: [mdx(), tailwind()],
+  integrations: [mdx(), vanillaExtractPlugin()]
 });
